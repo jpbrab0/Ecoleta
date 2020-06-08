@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-search-results" %}
+
+{% block title %}
+    <title>Resultado da pesquisa</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/search-results.css">
+{% endblock styles %}
+
+{#<div id="page-home">#}
+{% block content %}
+    <header>
+        <img src="/assets/logo.svg" alt="Logomarca">
+        <a name="darcula">Modo Darcula
+            <i class="material-icons">brightness_2</i>
+        </a>
+        <a href="/">
+            <span></span>
+            Voltar para a home
+        </a>
+    </header>
+
+    <main>
+
+        <h4>
+            <strong>{{total}} pontos</strong>
+            encontrados
+        </h4>
+        {% if total > 0 %}
+        <div class="cards">
+
+            {% for place in places %}
+                <div class="card">
+                    <img src="{{ place.image }}" alt="{{place.name}}">
+                    <h1>{{place.name}}</h1>
+                    <h3>{{place.items}}</h3>
+                    <p>
+                        {{place.city}},{{place.state}}
+                        <br/>
+                        {{place.address}}<br/>
+                        Número:{{place.address2}}
+                    </p>
+                </div>
+            {% endfor %}
+
+        {%else%}
+
+        <h4><strong>Nenhum</strong> local cadastrado</h4>
+
+        {% endif %}
+
+       
+
+        
+
+           
+            
+        </div>
+    
+
+{% endblock content %}
+
+    </main>
+
+<script src="/scripts/darculaMode.js"></script>

@@ -1,0 +1,34 @@
+
+:root{
+    --title-color:#322153;
+    --primary-color:#34cb79;
+    --color:#f0f0f5;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Roboto, sans-serif;
+}
+body{
+    background-color: #f0f0f5;
+    -webkit-font-smoothing:antialiased;
+    
+}
+body.darcula{
+    background-color: rgb(116, 108, 108);
+    -webkit-font-smoothing:antialiased;
+    color: rgb(4, 250, 4);
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+h1,h2,h3,h4,h5,h6{
+    color: var(--title-color);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
