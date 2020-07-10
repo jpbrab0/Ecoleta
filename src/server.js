@@ -15,18 +15,11 @@ nunjucks.configure("src/views", {
     noCache:true,
 })
 
-
 server.get("/", (req, res) =>{
     return res.render("index.html")
 })
 
 server.get("/create-point", (req, res) =>{
-
-
-
-
-
-
     return res.render("create-point.html")
 })
 server.post("/savepoint", (req, res) => {
@@ -67,9 +60,6 @@ server.post("/savepoint", (req, res) => {
     
 })
 
-
-
-
 server.get("/search", (req, res) =>{
 
     const search = req.query.search
@@ -89,11 +79,7 @@ server.get("/search", (req, res) =>{
         console.log(rows)
 
         return res.render("search-results.html", {places:rows, total:total})
-    })
-
-    
+    })  
 })
-
-
 
 server.listen(3333);
